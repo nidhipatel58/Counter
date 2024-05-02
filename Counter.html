@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+
+
+
+    <div class="counter">
+        <button onclick="add()" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+        <button class="num-btn">0</button>
+        <button onclick="sub()" class="sub-btn"><i class="fa-solid fa-minus"></i></button>
+
+    </div>
+
+    <div class="reset">
+        <button onclick="reset()" class="settime">Reset</button>
+    </div>
+
+
+
+
+    <script>
+
+        let count = 0;
+        function add() {
+            setTimeout(() => {
+                count = count + 1;
+                document.querySelector(".num-btn").innerHTML = count;
+            }, 100)
+
+        }
+
+
+        function sub() {
+            setTimeout(() => {
+                count = count - 1;
+                document.querySelector(".num-btn").innerHTML = count;
+            }, 100)
+
+        }
+
+        function reset() {
+            setTimeout(() => {
+                count = 0;
+                document.querySelector(".num-btn").innerHTML = count;
+            }, 10)
+        }
+
+    </script>
+
+
+</body>
+
+</html>
